@@ -1,0 +1,50 @@
+-- Create Store Procedure --
+CREATE PROCEDURE SP_Add_Employee(
+    @Name NVARCHAR (50),
+	@Gender varchar(50),
+	@Designation varchar(50),
+	@Age AS INT,
+	@City varchar(50),
+    @Email AS NVARCHAR (50)
+)
+AS
+BEGIN
+	insert into Employees (Name, Gender, Designation, Age, City, Email) values (@Name, @Gender, @Designation, @Age, @City, @Email)
+END;
+
+
+
+-- Update Store Procedure --
+CREATE PROCEDURE SP_Update_Employee(
+    @Id INT,
+    @Name NVARCHAR (50),
+	@Gender varchar(50),
+	@Designation varchar(50),
+	@Age AS INT,
+	@City varchar(50),
+    @Email AS NVARCHAR (50)
+)
+AS
+BEGIN
+	update Employees set Name=@Name, Gender=@Gender, Designation=@Designation, Age=@Age, City= @City, Email= @Email where id= @Id
+END;
+
+
+
+-- Delete Store Procedure --
+CREATE PROCEDURE SP_Delete_Employee(
+    @Id INT
+)
+AS
+BEGIN
+	delete from Employees where id=@Id
+END;
+
+
+
+-- Read Store Procedure --
+CREATE PROCEDURE SP_GetAll_Employee
+AS
+BEGIN
+	select * from Employees order by id
+END;

@@ -1,0 +1,39 @@
+Implement ASP.NET MVC Core CRUD Operation with ADO.NET Store Procedure & .NET 8.0 and Without EFCore (DB First Approach):
+link: https://www.youtube.com/watch?v=13DGXaY3B4I
+
+
+Step-1: Login in MS SQL Server Management Studio in SQL Server Authentication Mode with User Name & Password.
+			-- create database
+			-- create Table Structure
+			-- add data into table manually
+			-- create store procedure for CRUD operations separately.
+			
+Step-2: Select ASP.NET Core Web App (Model-View-Controller) and then go as usual.
+
+Step-3: Create a static class for connection string.
+
+Step-4: Create a Model class.
+
+Step-5: Install 1 Packages
+			i)  System.Data.SqlClient
+
+Step-6: Create a class as Data Access Layer in which we will write the code of ADO.NET
+
+Step-7: Create a controller and action methods to communicate with Data Access Layer.
+
+Step-8: Create action method's View in a different way
+		-- first check if we add a index action method's view of Home controller,
+		then first delete the view of Views->Home->index.cshtml file.
+
+		-- right click on action method (Index)
+		-- select razor view
+		-- change View Name or keep the remain name
+		-- select Template (each template is used for erach single CRUD operations.)
+				-- Create (-- is used for creating view of Create Operation)
+				-- Delete (-- is used for creating view of Delete Operation)
+				-- Details (-- is used for creating view of Showing Details)
+				-- Edit (-- is used for creating view of Edit Operation)
+				-- Empty (Without Model)
+				-- List (-- is used for show all data)
+		-- select the model class.
+		-- click add
